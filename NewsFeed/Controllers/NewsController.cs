@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NewsFeed.Models;
-using Redstone.Sdk.Server.Filters;
-using System.Collections.Generic;
 using System.Net;
 
 namespace NewsFeed.Controllers
@@ -9,12 +7,11 @@ namespace NewsFeed.Controllers
 	[Route("api/[controller]")]
 	//[ServiceFilter(typeof(TokenResourceFilter))]
 	[ApiController]
-	public class NewsController : ControllerBase
+	public class NewsController : Controller
 	{
-		// GET: api/News
-		[HttpGet]
-		//public IEnumerable<NewsItem> Get()
-		public string Get()
+		protected NewsItems items;
+
+		public NewsController()
 		{
 			var url = "https://newsapi.org/v2/everything?" +
 				"q=Stratis&" +
@@ -24,14 +21,30 @@ namespace NewsFeed.Controllers
 
 			var json = new WebClient().DownloadString(url);
 
-			return new NewsItems(json).ToString();
+			items = new NewsItems(json);
+
 		}
 
-		// GET: api/News/5
-		[HttpGet("{id}", Name = "Get")]
-		public string Get(int id)
+		[HttpGet]
+		public ActionResult<NewsItems> GetAll()
 		{
-			return "value";
+			return items;
 		}
+
+		//// GET: api/News
+		//[HttpGet]
+		////public IEnumerable<NewsItem> Get()
+		//public IActionResult Get()
+		//{
+
+		//	return Ok("value"); // new NewsItems(json).ToString();
+		//}
+
+		//// GET: api/News/5
+		//[HttpGet("{id}", Name = "Get")]
+		//public string Get(int id)
+		//{
+		//	return "value";
+		//}
 	}
 }

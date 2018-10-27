@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Redstone.NewsFeedClient</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Redstone.Sdk">
+      <HintPath>..\..\..\..\..\..\Github\Redstone\src\Redstone\Sdk\Redstone.Sdk.Common\bin\Debug\netcoreapp2.1\Redstone.Sdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

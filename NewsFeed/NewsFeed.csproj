@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Redstone.NewsFeed</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,23 +13,24 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NStratis.HashLib" Version="1.0.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="NBitcoin">
-      <HintPath>D:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\NBitcoin.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Github\Redstone\src\NBitcoin\bin\Debug\netstandard2.0\NBitcoin.dll</HintPath>
     </Reference>
     <Reference Include="Redstone.Core">
-      <HintPath>D:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Redstone.Core.dll</HintPath>
+      <HintPath>C:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Redstone.Core.dll</HintPath>
     </Reference>
     <Reference Include="Redstone.Sdk.Server">
-      <HintPath>D:\Github\Redstone\src\Redstone\Sdk\Redstone..Sdk.Server\bin\Debug\netcoreapp2.1\Redstone.Sdk.Server.dll</HintPath>
+      <HintPath>C:\Github\Redstone\src\Redstone\Sdk\Redstone..Sdk.Server\bin\Debug\netcoreapp2.1\Redstone.Sdk.Server.dll</HintPath>
     </Reference>
     <Reference Include="Stratis.Bitcoin">
-      <HintPath>D:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Stratis.Bitcoin.dll</HintPath>
+      <HintPath>C:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Stratis.Bitcoin.dll</HintPath>
     </Reference>
     <Reference Include="Stratis.Bitcoin.Features.Wallet">
-      <HintPath>D:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Stratis.Bitcoin.Features.Wallet.dll</HintPath>
+      <HintPath>C:\Github\Redstone\src\Redstone\Programs\Redstone.RedstoneFullNodeD\bin\Debug\netcoreapp2.1\Stratis.Bitcoin.Features.Wallet.dll</HintPath>
     </Reference>
   </ItemGroup>
 
